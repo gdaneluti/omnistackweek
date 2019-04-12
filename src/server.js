@@ -18,7 +18,7 @@ io.on('connection', socket => {
         socket.join(box);
 });
 
-mongoose.connect('mongodb://omnistack:omnistack@localhost:27017/omnistack', {
+mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-wdpk8.mongodb.net/omnistackdb?retryWrites=true', {
     useNewUrlParser: true
 });
 
