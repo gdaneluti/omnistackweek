@@ -14,6 +14,7 @@ class FileController {
         await box.save();
         
         req.io.sockets.in(box._id).emit('file', file);
+        res.setHeader('Access-Control-Allow-Credentials', true);
 
         return res.json(file);
     }
