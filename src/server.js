@@ -24,6 +24,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-wdpk8.mongodb.net/o
 
 app.use((req, res, next) => {
     req.io = io;
+    res.setHeader('Access-Control-Allow-Credentials', true);
     return next();
 });
 
